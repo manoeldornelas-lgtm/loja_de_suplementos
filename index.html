@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Power Nutrition — suplementos e acessórios para sua rotina fitness.">
+  <title>Power Nutrition | Sua evolução começa aqui</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="announcement">
+    FRETE GRÁTIS acima de R$ 299 • Use <strong>POWER10</strong> e ganhe 10% OFF
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Power Nutrition início">
+      <span class="brand-mark">P<span>N</span></span>
+      <span>POWER<strong>NUTRITION</strong></span>
+    </a>
+
+    <form class="search" id="searchForm" role="search">
+      <input id="searchInput" type="search" placeholder="O que você procura?" aria-label="Pesquisar produtos">
+      <button aria-label="Pesquisar" type="submit">⌕</button>
+    </form>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="favoritesToggle" aria-label="Ver favoritos">
+        ♡ <span class="desktop-label">Favoritos</span>
+      </button>
+      <button class="icon-btn cart-trigger" id="cartToggle" aria-label="Abrir carrinho">
+        ♧ <span class="desktop-label">Carrinho</span><b id="cartCount">0</b>
+      </button>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Categorias">
+    <a href="#catalogo" data-category="Todos">Todos</a>
+    <a href="#catalogo" data-category="Creatina">Creatina</a>
+    <a href="#catalogo" data-category="Whey Protein">Whey Protein</a>
+    <a href="#catalogo" data-category="Hipercalóricos">Hipercalóricos</a>
+    <a href="#catalogo" data-category="Pré-treino">Pré-treino</a>
+    <a href="#catalogo" data-category="Vitaminas">Vitaminas</a>
+    <a href="#catalogo" data-category="Acessórios">Acessórios</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">PERFORMANCE • FOCO • EVOLUÇÃO</p>
+        <h1>SUA MELHOR<br><span>VERSÃO</span> COMEÇA AQUI.</h1>
+        <p>Suplementação para acompanhar sua dedicação dentro e fora da academia.</p>
+        <a class="btn btn-primary" href="#catalogo">COMPRAR AGORA <span>→</span></a>
+        <div class="hero-note">
+          <i></i> OFERTAS ESPECIAIS POR TEMPO LIMITADO
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Imagem ilustrativa de suplementos">
+        <div class="hero-orbit"></div>
+        <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=900&q=85" alt="Pote de suplemento em ambiente fitness">
+        <div class="hero-stamp">POWER<br><b>YOUR</b><br>GOALS</div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div>
+        <span>↗</span>
+        <p><strong>Entrega para todo o Brasil</strong><small>Consulte o prazo para sua região</small></p>
+      </div>
+      <div>
+        <span>✓</span>
+        <p><strong>Compra demonstrativa</strong><small>Ambiente de demonstração</small></p>
+      </div>
+      <div>
+        <span>♢</span>
+        <p><strong>Variedade fitness</strong><small>Produtos para sua rotina</small></p>
+      </div>
+    </section>
+
+    <section class="section categories-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ENCONTRE O QUE PRECISA</p>
+          <h2>COMPRE POR <span>CATEGORIA</span></h2>
+        </div>
+      </div>
+
+      <div class="category-grid">
+        <button class="category-tile" data-category="Creatina">
+          <span>01</span><b>CREATINA</b><small>Força e potência</small>
+        </button>
+        <button class="category-tile" data-category="Whey Protein">
+          <span>02</span><b>WHEY PROTEIN</b><small>Proteína para sua rotina</small>
+        </button>
+        <button class="category-tile" data-category="Hipercalóricos">
+          <span>03</span><b>HIPERCALÓRICOS</b><small>Mais praticidade</small>
+        </button>
+        <button class="category-tile" data-category="Pré-treino">
+          <span>04</span><b>PRÉ-TREINO</b><small>Energia para treinar</small>
+        </button>
+        <button class="category-tile" data-category="Vitaminas">
+          <span>05</span><b>VITAMINAS</b><small>Cuidados diários</small>
+        </button>
+        <button class="category-tile" data-category="Acessórios">
+          <span>06</span><b>ACESSÓRIOS</b><small>Seu kit de treino</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="section catalog-section" id="catalogo">
+      <div class="section-heading catalog-heading">
+        <div>
+          <p class="eyebrow">ESCOLHAS DA COMUNIDADE</p>
+          <h2>NOSSOS <span>PRODUTOS</span></h2>
+        </div>
+        <span class="result-count" id="resultCount">Produtos em destaque</span>
+      </div>
+
+      <div class="toolbar">
+        <label>Categoria
+          <select id="categoryFilter">
+            <option value="Todos">Todas as categorias</option>
+            <option>Creatina</option>
+            <option>Whey Protein</option>
+            <option>Hipercalóricos</option>
+            <option>Pré-treino</option>
+            <option>Barras de proteína</option>
+            <option>Vitaminas</option>
+            <option>Acessórios</option>
+          </select>
+        </label>
+
+        <label>Preço máximo
+          <select id="priceFilter">
+            <option value="all">Qualquer preço</option>
+            <option value="80">Até R$ 80</option>
+            <option value="150">Até R$ 150</option>
+            <option value="250">Até R$ 250</option>
+          </select>
+        </label>
+
+        <label>Ordenar por
+          <select id="sortFilter">
+            <option value="featured">Destaques</option>
+            <option value="low">Menor preço</option>
+            <option value="high">Maior preço</option>
+            <option value="popular">Popularidade</option>
+          </select>
+        </label>
+
+        <button class="clear-filters" id="clearFilters">Limpar filtros</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>
+        Nenhum produto encontrado. Tente alterar os filtros.
+      </p>
+    </section>
+
+    <section class="promo-band">
+      <div>
+        <p class="eyebrow">SEU PRÓXIMO PEDIDO COM DESCONTO</p>
+        <h2>10% OFF NA SUA COMPRA</h2>
+        <p>Use o cupom <strong>POWER10</strong> no carrinho.</p>
+      </div>
+      <button class="btn btn-light" id="copyCoupon">COPIAR CUPOM</button>
+    </section>
+
+    <section class="section about-section">
+      <div>
+        <p class="eyebrow">SOBRE A POWER NUTRITION</p>
+        <h2>SEU FOCO.<br><span>SUA JORNADA.</span></h2>
+      </div>
+      <p>
+        A Power Nutrition é uma loja demonstrativa criada para reunir suplementos
+        e acessórios em uma experiência de compra simples. Explore o catálogo,
+        monte seu carrinho e teste o fluxo de pedido. Os produtos, preços e
+        pagamentos desta versão são ilustrativos.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <a class="brand footer-brand" href="#">
+        <span class="brand-mark">P<span>N</span></span>
+        <span>POWER<strong>NUTRITION</strong></span>
+      </a>
+      <p>SUPLEMENTAÇÃO PARA QUEM NÃO PARA.</p>
+      <div class="footer-links">
+        <a href="#catalogo">Produtos</a>
+        <a href="#catalogo">Ofertas</a>
+        <a href="#sobre">Sobre</a>
+        <a href="mailto:contato@powernutrition.exemplo">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Power Nutrition. Loja demonstrativa.</span>
+      <span>Instagram • WhatsApp • Pix • Cartão</span>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="side-panel" id="cartPanel" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="panel-head">
+      <h2>SEU CARRINHO</h2>
+      <button class="close-panel" data-close aria-label="Fechar">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-summary">
+      <div class="coupon-row">
+        <input id="couponInput" placeholder="Cupom de desconto">
+        <button id="applyCoupon">Aplicar</button>
+      </div>
+
+      <p id="couponMessage" class="form-message"></p>
+
+      <div class="summary-line">
+        <span>Subtotal</span><strong id="subtotal">R$ 0,00</strong>
+      </div>
+      <div class="summary-line">
+        <span>Desconto</span><strong id="discount">R$ 0,00</strong>
+      </div>
+      <div class="summary-line total">
+        <span>Total</span><strong id="total">R$ 0,00</strong>
+      </div>
+
+      <button class="btn btn-primary full-btn" id="checkoutButton">
+        FINALIZAR PEDIDO →
+      </button>
+      <small class="demo-note">Checkout demonstrativo. Nenhum pagamento será realizado.</small>
+    </div>
+  </aside>
+
+  <section class="modal" id="productModal" aria-modal="true" role="dialog" aria-hidden="true">
+    <button class="modal-close" data-close aria-label="Fechar">×</button>
+    <div id="productDetail"></div>
+  </section>
+
+  <section class="modal checkout-modal" id="checkoutModal" aria-modal="true" role="dialog" aria-hidden="true">
+    <button class="modal-close" data-close aria-label="Fechar">×</button>
+
+    <p class="eyebrow">SÓ MAIS UM PASSO</p>
+    <h2>FINALIZAR <span>PEDIDO</span></h2>
+
+    <form id="checkoutForm" class="checkout-form">
+      <div class="form-grid">
+        <label>Nome completo
+          <input name="name" required autocomplete="name" placeholder="Seu nome">
+        </label>
+        <label>Telefone
+          <input name="phone" required autocomplete="tel" placeholder="(00) 00000-0000">
+        </label>
+        <label class="wide">Endereço
+          <input name="address" required autocomplete="street-address" placeholder="Rua, número e complemento">
+        </label>
+        <label>CEP
+          <input name="cep" required autocomplete="postal-code" placeholder="00000-000">
+        </label>
+        <label>Cidade / Estado
+          <input name="city" required placeholder="Sua cidade - UF">
+        </label>
+      </div>
+
+      <label>Forma de pagamento
+        <select name="payment" required>
+          <option value="">Selecione</option>
+          <option>Pix (simulação)</option>
+          <option>Cartão (simulação)</option>
+          <option>Boleto (simulação)</option>
+        </select>
+      </label>
+
+      <div class="checkout-total">
+        <span>Total do pedido</span>
+        <strong id="checkoutTotal">R$ 0,00</strong>
+      </div>
+
+      <button class="btn btn-primary full-btn" type="submit">CONFIRMAR PEDIDO</button>
+      <p class="demo-note">
+        Esta demonstração não coleta nem transmite seus dados e não processa pagamentos.
+      </p>
+    </form>
+
+    <div id="orderSuccess" class="success-message" hidden></div>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
